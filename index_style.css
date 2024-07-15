@@ -1,9 +1,9 @@
 body {
-    cursor: url('image/cursor.PNG') 2 2,
+    cursor: url('ihttps://github.com/LUPRWEST/luprwest.github.io/blob/main/cursor.PNG?raw=true') 2 2,
             default;
 }
 a, button{
-    cursor: url('image/cursor_event.PNG') 2 2,
+    cursor: url('https://github.com/LUPRWEST/luprwest.github.io/blob/main/cursor_event.PNG?raw=true') 2 2,
     pointer;
 }
 
