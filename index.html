@@ -1,57 +1,91 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>Cyber Scavenger</title>
+<head>
+    <meta charset="utf-8"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-        <link rel="stylesheet" href="index_style.css">
+    <title>Cyber Scavenger</title>
+    <link rel="stylesheet" href="index_style.css">
 
-        <!--웹페이지 아이콘-->
-        <link rel="icon" href="https://raw.githubusercontent.com/LUPRWEST/luprwest.github.io/main/favicon.ico">
-    </head>
+    <!--img-->
+    <link rel="icon" href="https://raw.githubusercontent.com/LUPRWEST/luprwest.github.io/main/favicon.ico">
+    
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300&display=swap" rel="stylesheet">
 
-    <body>
-    <div class="container">
-        <div class="item"> <!--header-->
-            <h1>CYBER SCAVENGER</h1>
-                <i>시끄러운 음악이 흐르고 이 밤이 지나고 나면...</i> 
-                <br> 
-                <i>created in 24/06/03</i> 
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+        <h1>CYBER SCAVENGER</h1>
+
+        <div class="part-ui">
+            <a class='notice' title="INFORMATION"><i>시끄러운 음악이 흐르고 이 밤이 지나고 나면...</i></a>
         </div>
-        <div class="item"> <!--2-->
-            <strong>관리자 한마디</strong><br>웹페이지 공사중입니다.
-            <br>
-            <i>2024-07-13</i>
-        </div>
-        <div class="item"> <!--3-->
-             <h2>prople 👤</h2>
-                <strong>@WAKEUP</strong><br>KOR/ENG amateur for illustrate, programing, craftring... etc. 
-        </div>
-        <div class="item"> <!--4-->
-            <h3>link ⛓️</h3>
-                <li><a href="https://x.com/WAKEUPpng" title="🎨">@WAKEUP twitter</a></li>
-                <li><a href="https://github.com/LUPRWEST">@LUPRWEST github</a></li>
-                <li><a href="https://steamcommunity.com/profiles/76561198845000738/" title="친구친성 환영^^">@개굴이 Steam</a></li>
-        </div>
-        <div class="item"> <!--5-->
-            <details>
-            <summary>contect 📞</summary>
-                <li>escwakeup@gmail.com</li>
-                <li>twitter DM</li>
-            </details>
-        </div>
-        <div class="item"> <!--6-->
-            <h3>개발노트 📓</h3>
-                <li><a href="webpage.html">cyber scavenger</a></li>
-            <h3>recommending songs 🎧</h3>
-                <a href="https://open.spotify.com/track/5qmNiJvNSCvXKRUlPJofZS?si=0ddd7550575d446d" title="by Spotify">Tomarrow Is Closed - Noting But Thieves</a>
-                <br>
-                <a  href="https://open.spotify.com/track/0knbMPVHpFbsx38pLoYSRs?si=7a7652393aec472d" title="by Spotify">Hysteria - Muse</a>
-        </div>
-        <div class="item"> <!--footer-->
-            <hr>
-            <i>Copyright 2024. @WAKEUP all rights reserved</i>
-        </div>
+
+        <ul id="part-container-notice">
+            <li class="notice">
+                <div>
+                created in 24/06/03<br>
+                <a href="webpage.html">cyber scavenger 개발노트 📓</a>
+                </div>
+            </li>
+        </ul>
     </div>
-    </body>
+
+    <script>
+        $(document).ready(function() {
+            let currentPart = 'menu';
+            let isMenuVisible = false;
+    
+            $(".part-ui a").on("click", function() {
+                var clss = $(this).attr("class");
+                if (currentPart === clss && isMenuVisible) {
+                    $("#part-container-" + clss).hide();
+                    isMenuVisible = false;
+                } else {
+                    $("#part-container-" + clss).show().find("li." + clss).show();
+                    currentPart = clss;
+                    isMenuVisible = true;
+                }
+            });
+        });
+    </script>
+
+    <div class="info"> 
+        <strong>관리자 한마디</strong><br>웹페이지 공사중입니다.
+        <br>
+        <i>2024-07-13</i>
+    </div>
+    <div class="prople">
+            <h2>prople 👤</h2>
+            <strong>@WAKEUP</strong><br>KOR/ENG amateur for illustrate, programing, craftring... etc. 
+    </div>
+    <div class="link"> 
+        <h3>link ⛓️</h3>
+            <li><a href="https://x.com/WAKEUPpng" title="🎨">@WAKEUP twitter</a></li>
+            <li><a href="https://github.com/LUPRWEST">@LUPRWEST github</a></li>
+            <li><a href="https://steamcommunity.com/profiles/76561198845000738/" title="친구친성 환영^^">@개굴이 Steam</a></li>
+    </div>
+    <div class="contect">
+        <details>
+        <summary>contect 📞</summary>
+            <li>escwakeup@gmail.com</li>
+            <li>twitter DM</li>
+        </details>
+    </div>
+    <div class="others"> 
+        <h3>recommending songs 🎧</h3>
+            <a href="https://open.spotify.com/track/5qmNiJvNSCvXKRUlPJofZS?si=0ddd7550575d446d" title="by Spotify">Tomarrow Is Closed - Noting But Thieves</a>
+            <br>
+            <a  href="https://open.spotify.com/track/0knbMPVHpFbsx38pLoYSRs?si=7a7652393aec472d" title="by Spotify">Hysteria - Muse</a>
+    </div>
+</div>
+<footer>
+    <i>Copyright 2024. @WAKEUP all rights reserved</i>
+</footer>
+</body>
 </html>
