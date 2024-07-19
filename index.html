@@ -6,13 +6,12 @@
 
     <title>Cyber Scavenger</title>
     <link rel="stylesheet" href="index_style.css">
+    <link rel="stylesheet" href="template.css">
 
     <!--img-->
     <link rel="icon" href="https://raw.githubusercontent.com/LUPRWEST/luprwest.github.io/main/favicon.ico">
     
     <!--font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300&display=swap" rel="stylesheet">
 
 </head>
@@ -20,49 +19,39 @@
 <body>
 <div class="container">
     <div class="header">
-        <h1>CYBER SCAVENGER</h1>
+        <h1 data-value="https://luprwest.github.io" id="pagelink">CYBER SCAVENGER</h1>
+        <script>$(document).ready(function() {
+            $('#pagelink').on('click', function() {
+                /*값 가져오기*/
+                var textValue = $(this).data('value');
+                /*값 복사*/
+                document.execCommand('copy');
+                alert('page link is copied!');
+            });
+        });</script>
 
         <div class="part-ui">
-            <a class='notice' title="INFORMATION"><i>시끄러운 음악이 흐르고 이 밤이 지나고 나면...</i></a>
+            <a class='inform' title="INFORMATION">시끄러운 음악이 흐르고 이 밤이 지나고 나면...</a>
         </div>
-
-        <ul id="part-container-notice">
-            <li class="notice">
+        <ul id="part-container-inform">
+            <ol class="inform">
                 <div>
                 created in 24/06/03<br>
                 <a href="webpage.html">cyber scavenger 개발노트 📓</a>
                 </div>
-            </li>
+            </ol>
         </ul>
+        <script type="text/javascript" src="index_fn.js"></script> 
     </div>
-
-    <script>
-        $(document).ready(function() {
-            let currentPart = 'menu';
-            let isMenuVisible = false;
     
-            $(".part-ui a").on("click", function() {
-                var clss = $(this).attr("class");
-                if (currentPart === clss && isMenuVisible) {
-                    $("#part-container-" + clss).hide();
-                    isMenuVisible = false;
-                } else {
-                    $("#part-container-" + clss).show().find("li." + clss).show();
-                    currentPart = clss;
-                    isMenuVisible = true;
-                }
-            });
-        });
-    </script>
-
     <div class="info"> 
         <strong>관리자 한마디</strong><br>웹페이지 공사중입니다.
         <br>
         <i>2024-07-13</i>
     </div>
     <div class="prople">
-            <h2>prople 👤</h2>
-            <strong>@WAKEUP</strong><br>KOR/ENG amateur for illustrate, programing, craftring... etc. 
+            <h2>@WAKEUP 👤</h2>
+            amateur for illustrate, programing, craftring... etc. 
     </div>
     <div class="link"> 
         <h3>link ⛓️</h3>
@@ -71,21 +60,45 @@
             <li><a href="https://steamcommunity.com/profiles/76561198845000738/" title="친구친성 환영^^">@개굴이 Steam</a></li>
     </div>
     <div class="contect">
-        <details>
-        <summary>contect 📞</summary>
-            <li>escwakeup@gmail.com</li>
-            <li>twitter DM</li>
-        </details>
+        <div class="part-ui">
+            <a class='cont'><i>contect 📞</i></a>
+        </div>
+
+        <ul id="part-container-cont">
+            <ol class="cont">
+                <div>
+                    <li id="email">escwakeup@gmail.com</li>
+                    <li>twitter DM</li>
+                </div>
+            </ol>
+        </ul>
+        <script type="text/javascript" src="index_fn.js"></script> 
+        <script>
+            $(document).ready(function() {
+            $('#email').on('click', function() {
+                /*값 가져오기*/
+                var textValue = $(this).text();
+                /*값 복사*/
+                document.execCommand('copy');
+                alert('email is copied!');
+            });
+        });
+        </script>
     </div>
+
     <div class="others"> 
         <h3>recommending songs 🎧</h3>
             <a href="https://open.spotify.com/track/5qmNiJvNSCvXKRUlPJofZS?si=0ddd7550575d446d" title="by Spotify">Tomarrow Is Closed - Noting But Thieves</a>
             <br>
             <a  href="https://open.spotify.com/track/0knbMPVHpFbsx38pLoYSRs?si=7a7652393aec472d" title="by Spotify">Hysteria - Muse</a>
     </div>
+
+    <div class="music">
+        <img src="image/icon.PNG" id="player">
+        <script type="text/javascript" src="musicplayer.js"></script> 
+    </div>
 </div>
 <footer>
     <i>Copyright 2024. @WAKEUP all rights reserved</i>
 </footer>
 </body>
-</html>
