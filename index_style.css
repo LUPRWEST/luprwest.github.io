@@ -21,16 +21,17 @@
     padding: 20px;
     min-width: 100px;
 }
-.prople {
+.noticebar {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     padding: 20px;
 }
-.link {
+.menubar {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
     padding: 20px;
 }
+
 .contect {
     background-color: rgb(206, 223, 225);
     z-index: 1;
@@ -40,11 +41,7 @@
     bottom: 20px;
     padding: 5px;
 }
-.others {
-    grid-column: 2 / 3;
-    grid-row: 2 / 4;
-    padding: 20px;
-}
+
 .music {
     z-index: 1;
     position: fixed;
@@ -58,7 +55,6 @@
     margin-left: 5px;
     padding-left: 5px;
 }
-
 #part-container-inform {
     display: none;
     margin-left: 5px;
@@ -72,6 +68,32 @@
     padding-left: 5px;
 }
 #part-container-cont {
+    display: none;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+#part-container-menu ol {
+    display: none;
+    list-style: none;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+#part-container-menu {
+    display: none;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+#part-container-notice ol {
+    display: none;
+    list-style: none;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+#part-container-notice {
     display: none;
     margin-left: 5px;
     padding-left: 5px;
