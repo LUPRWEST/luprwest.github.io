@@ -1,5 +1,6 @@
 /*cursor*/
 body {
+    background-color: #e6e6da;
     cursor: url('https://github.com/LUPRWEST/luprwest.github.io/blob/main/cursor.PNG?raw=true') 2 2, default;
 }
 a, button{
