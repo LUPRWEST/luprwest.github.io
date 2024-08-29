@@ -1,3 +1,9 @@
+body{
+    background-image: url("https://github.com/LUPRWEST/luprwest.github.io/blob/main/background.png?raw=true");
+    background-repeat: repeat;
+    background-size: cover;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -6,7 +12,6 @@
     height: auto;
     min-height: 100%;
     padding-bottom: 10px;
-
 }
 
 .header {
