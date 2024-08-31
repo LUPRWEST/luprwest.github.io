@@ -47,7 +47,7 @@ body{
 .music {
     z-index: 1;
     position: fixed;
-    right: 20px;
+    right: 10px;
     bottom: 100px;
 }
 
