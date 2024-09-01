@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="template.css">
 
     <!--img-->
-    <link rel="icon" href="https://raw.githubusercontent.com/LUPRWEST/luprwest.github.io/main/favicon.ico">
+    <link rel="icon" href="https://github.com/LUPRWEST/luprwest.github.io/blob/main/icon.PNG?raw=true">
     
     <!--font-->
     <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300&display=swap" rel="stylesheet">
@@ -20,39 +20,42 @@
 
 <div class="container">
     <div class="header">
-        <h1 data-value="https://luprwest.github.io" id="pagelink">CYBER SCAVENGER</h1>
-        <script>$(document).ready(function() {
-            $('#pagelink').on('click', function() {
-                /*값 가져오기*/
-                var textValue = $(this).data('value');
-                /*값 복사*/
-                document.execCommand('copy');
-                alert('page link is copied!');
+        <img data-value="https://luprwest.github.io" id="pagelink" src="https://github.com/LUPRWEST/luprwest.github.io/blob/main/header.PNG?raw=true">
+        <script>
+        document.getElementById('pagelink').addEventListener('click', function() {
+            // 값 가져오기
+            var value = this.dataset.value;
+            
+            // 클립보드에 복사
+            navigator.clipboard.writeText(value).then(function() {
+                alert('Page link is copied!');
+            }).catch(function(err) {
+                console.error('Error copying text: ', err);
             });
-        });</script>
-
+        });
+        </script>
+        <div class="headerlist">
         <div class="part-ui">
-            <a class='inform' title="INFORMATION">네트의 바다에서 데이터 조각을 주워 담자</a>
+            <a class='inform' title="INFORMATION">⸺네트의 바다에서 데이터 조각을 주워 담자</a>
         </div>
         <ul id="part-container-inform">
             <ol class="inform">
                 <div>
                 사이트 개설일: 24년 06월 03일<br>
-                최종 갱신일: 24년 8월 29일<br>
+                마지막 갱신일: 24년 09월 01일<br>
                 <a href="https://github.com/LUPRWEST/luprwest.github.io">⛓Cyber Scavenger Github</a>
                 </div>
             </ol>
         </ul>
-    </div>
-    <div class="movingtext">
+        </div>
         <MARQUEE>⚠️페이지 공사중입니다⚠️ 🎧시끄러운 음악이 흐르고 이 밤이 지나고 나면...</MARQUEE>
     </div>
     <div class="noticebar">
         <p>NOTICE 🐚</p>
         <ul class="notice">
-            개굴이의 개인 홈페이지 입니다. 이것저것 아무거나 하고 있습니다.<br>
-            죄측 하단 이미지 클릭 시 음악 재생<br>
-            PC로 접속 권장<br><br>
+            개굴이의 개인 홈페이지; 이것저것 아무거나 하고 있습니다.<br>
+            우측 하단 이미지 클릭 시 음악 재생<br>
+            PC 접속 권장<br><br>
             link 
             <li><a href="https://x.com/LUPRWEST">⛓개굴의 트위터</a></li>
             <li><a href="https://blog.naver.com/5th-industry">⛓개굴의 블로그</a></li>
@@ -63,10 +66,10 @@
     <div class="menubar">
         <p>MENU 🧂</p>
         <ul class="menu">
-            <li><a href="">개발노트</a></li>
-            <li><a href="">추천노래</a></li>
-            <li><a href="">다이어리</a></li>
-            <li><a href="">자료공유</a></li>
+            <li><a href="codenote.html">개발노트</a></li>
+            <li><a href="songslist.html">추천노래</a></li>
+            <li><a href="diary.html">랜선일기</a></li>
+            <li><a href="share.html">자료공유</a></li>
         </ul>
     </div>
 
@@ -97,7 +100,7 @@
     </div>
 
     <div class="music" id="image-container">
-        <img id="player" alt="Music player" height="200" src="https://github.com/LUPRWEST/luprwest.github.io/blob/main/music_off.PNG?raw=true">
+        <img id="player" alt="Music player" height="200" title="Trois Gymnopédies: Première Gymnopédie" src="https://github.com/LUPRWEST/luprwest.github.io/blob/main/music_off.PNG?raw=true">
     </div>
     <audio id="audio" src="https://github.com/LUPRWEST/luprwest.github.io/raw/main/music.mp3"></audio>
     <script type="text/javascript" src="musicplayer.js"></script>
