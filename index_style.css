@@ -47,17 +47,20 @@ body{
     background-color: rgb(206, 223, 225);
     z-index: 1;
     position: fixed;
-
     right: 20px;
     bottom: 20px;
     padding: 5px;
 }
 
-.music {
+.side {
     z-index: 1;
     position: fixed;
     right: 10px;
-    bottom: 100px;
+    top: 10px;
+}
+.updatelog {
+    background-color: rgb(206, 223, 225);
+    padding: 5px;
 }
 
 .menu {
@@ -69,7 +72,20 @@ body{
 .notice {
     margin-left: 5px;
     padding-left: 5px;
-    list-style: none;
+}
+
+.notice table {
+    width: 100%;
+    border: 3px solid #1d8aae;
+    background: #ffffff;
+}
+.notice td, tr {
+    padding: 10px;
+    border: 2px solid #79c2db;
+}
+#tableheader {
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
 /*이하 js 사용*/
@@ -98,6 +114,20 @@ body{
     margin-left: 5px;
     padding-left: 5px;
 }
+
+#part-container-log ol{
+    display: none;
+    list-style: none;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+#part-container-log {
+    display: none;
+    list-style: none;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
 
 #email:hover{
     text-decoration: underline;
