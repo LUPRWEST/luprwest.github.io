@@ -11,36 +11,39 @@ body{
     /*비율 조절용*/
     height: auto;
     min-height: 100%;
-    padding-bottom: 25px;
+    padding-bottom: 50px;
 }
 
 .header  {
     grid-column: 1 / 4;
     grid-row: 1 / 2;
 }
+
 #pagelink{
     max-width: 570px; 
     height: auto;
     padding-left: 0;
     padding-top: 20px;
 }
+
 .headerlist{
     padding-left: 20px;
 }
 
 .movingtext {
     grid-column: 1 / 4;
-    grid-row: 2 / 3;
-}
-.banner{
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    padding: 20px;
-}
-.menubar {
-    grid-column: 2 / 3;
     grid-row: 3 / 4;
+}
+.main{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
     padding: 20px;
+
+    min-width: 550px;
+
+    background-color: rgb(255, 255, 251);
+    border: 2px solid rgb(208, 209, 197);    /* 윤곽선 색과 두께 */
+
 }
 
 .contect {
@@ -63,12 +66,6 @@ body{
     padding: 5px;
 }
 
-.menu {
-    margin-left: 5px;
-    padding-left: 5px;
-    list-style: none;
-}
-
 table {
     width: 100%;
     border: 3px solid #1d8aae;
@@ -76,28 +73,11 @@ table {
     margin-bottom: 5px;
 }
 td, tr {
-    padding: 10px;
     border: 2px solid #79c2db;
-}
-
-#tableheader {
-    padding-bottom: 0;
-    padding-top: 0;
+    padding: 10px;
 }
 
 /*이하 js 사용*/
-
-#part-container-inform ol {
-    display: none;
-    list-style: none;
-    margin-left: 5px;
-    padding-left: 5px;
-}
-#part-container-inform {
-    display: none;
-    margin-left: 5px;
-    padding-left: 5px;
-}
 
 #part-container-cont ol{
     display: none;

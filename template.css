@@ -1,6 +1,9 @@
 /*cursor*/
 body {
     cursor: url('https://github.com/LUPRWEST/luprwest.github.io/blob/main/cursor.PNG?raw=true') 2 2, default;
+
+    /*fontr*/
+    font-family: 'neodgmFont', sans-serif;
 }
 a, button{
     cursor: url('https://github.com/LUPRWEST/luprwest.github.io/blob/main/cursor_event.PNG?raw=true') 2 2, pointer;
@@ -10,11 +13,11 @@ a, button{
     /*화면 비율*/
     box-sizing: border-box;
     margin: 0;
-
-    /*font*/
-    font-family: "Hahmlet", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
+}
+@font-face {
+    font-family: 'neodgmFont'; /* 나중에 쓸 이름 */
+    src: url('https://github.com/LUPRWEST/luprwest.github.io/blob/main/neodgm.woff?raw=true') format('woff');
+    font-weight: normal; 
     font-style: normal;
 }
 
