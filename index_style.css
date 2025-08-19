@@ -26,10 +26,6 @@ body{
     padding-top: 20px;
 }
 
-.headerlist{
-    padding-left: 20px;
-}
-
 .movingtext {
     grid-column: 1 / 4;
     grid-row: 3 / 4;
@@ -46,24 +42,42 @@ body{
 
 }
 
-.contect {
-    background-color: rgb(206, 223, 225);
+.side_left{
     z-index: 1;
     position: fixed;
-    right: 20px;
-    bottom: 20px;
-    padding: 5px;
+    left: 10px;
+    bottom: 30%;
+    margin: -10px;
 }
 
-.side {
+.side_bottom {
+    z-index: 1;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+.contact {
+    border-radius: 12px;
+    background-color: rgb(206, 223, 225);
+    padding: 10px;
+    margin: 10px;
+}
+.flag_right{
+    padding: 0px;
+    margin: -10px;
+}
+
+.side_top {
     z-index: 1;
     position: fixed;
     right: 10px;
     top: 10px;
 }
 .updatelog {
+    border-radius: 12px;
     background-color: rgb(206, 223, 225);
-    padding: 5px;
+    padding: 10px;
+    margin: 10px;
 }
 
 table {
