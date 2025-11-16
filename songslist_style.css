@@ -1,0 +1,16 @@
+.main{
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 50px;
+}
+
+table {
+    border: 3px solid #1d8aae;
+    background: #ffffff;
+    margin: 5px;
+}
+td{
+    border: 2px solid #79c2db;
+    padding: 10px;
+}
+
