@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://github.com/LUPRWEST/luprwest.github.io/blob/main/image_home/background.png?raw=true");
+    background-repeat: repeat;
+    background-size: 1500px;
+    color: rgb(208, 209, 197);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    /* 추가: 화면 전체 높이를 브라우저 창에 맞추고 스크롤 방지 */
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+header, footer {
+    /* 기존 스타일 유지 (패딩만 약간 조정 가능) */
+    padding: 2rem 2rem; 
+    text-align: center;
+    background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+    border-bottom: 2px solid #333;
+    /* 추가: 헤더와 푸터가 찌그러지지 않도록 고정 */
+    flex-shrink: 0; 
+}
+
+.jukebox-container {
+    display: flex;
+    flex: 1;
+    padding: 2rem 2rem; /* 패딩 축소하여 공간 확보 */
+    gap: 5rem;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 0 auto;
+    /* 추가: 메인 영역이 화면을 벗어나지 않게 설정 */
+    overflow: hidden; 
+    width: 100%;
+}
+
+.cd-rack {
+    position: relative;
+    width: 350px;
+    height: 600px;
+    flex-shrink: 0; /* CD 랙 크기 유지 */
+}
+
+/* --- CD Item 관련 스타일 유지 --- */
+.cd-item {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background-image: url('https://github.com/LUPRWEST/luprwest.github.io/blob/main/image_song/CD.PNG?raw=true');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 4px solid #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.8);
+    user-select: none;
+}
+
+.cd-item:hover {
+    transform: translateX(50px) rotate(15deg) scale(1.05);
+    z-index: 999 !important;
+    border-color: rgb(77, 177, 134);
+    box-shadow: 0 0 30px rgb(117, 242, 188);
+}
+
+.cd-message {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(77, 177, 134);
+    color: #0d0d0d;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease, top 0.3s ease;
+    pointer-events: none;
+    box-shadow: 0 0 10px rgb(117, 242, 188);
+}
+
+.cd-item:hover .cd-message {
+    opacity: 1;
+    top: -50px;
+}
+
+/* --- Music List 영역: 스크롤바 추가 --- */
+.music-list-container {
+    flex: 1;
+    min-width: 450px;
+    background: rgba(26, 26, 26, 0.8);
+    padding: 2.5rem;
+    border-left: 5px solid rgb(77, 177, 134);
+    display: none; 
+    /* 추가: 컨테이너 높이를 부모에 맞추고 내부 스크롤 활성화 */
+    max-height: 100%; 
+    overflow-y: auto; 
+}
+
+/* 스크롤바 디자인 (사이버틱한 느낌 유지) */
+.music-list-container::-webkit-scrollbar {
+    width: 8px;
+}
+.music-list-container::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+.music-list-container::-webkit-scrollbar-thumb {
+    background: rgb(77, 177, 134);
+    border-radius: 4px;
+}
+
+.music-list-container h2 {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+}
+
+.song-card {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #111;
+    transition: background 0.3s;
+}
+
+.song-card:hover {
+    background: #1a1a1a;
+}
+
+.thumbnail {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 1px solid #333;
+    flex-shrink: 0;
+}
+
+.song-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.song-info h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.song-info p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.comment {
+    margin-top: 0.5rem;
+    color: #888;
+    border-left: 2px solid rgb(77, 177, 134);
+    padding-left: 0.8rem;
+}
+
+/* 하단 링크 및 푸터 스타일 유지 */
+.home-link {
+    color: rgb(208, 209, 197);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+
+.home-link:hover {
+    color: #1d8aae;
+}
+
+.copyright {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #444;
+}
