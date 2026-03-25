@@ -8,35 +8,3 @@ body {
 a, button{
     cursor: url('https://github.com/LUPRWEST/luprwest.github.io/blob/main/image/cursor_event.PNG?raw=true') 2 2, pointer;
 }
-
-*{
-    /*화면 비율*/
-    box-sizing: border-box;
-    margin: 0;
-}
-@font-face { 
-    /*폰트설정*/
-    font-family: 'neodgmFont'; /* 나중에 쓸 이름 */
-    src: url('https://github.com/LUPRWEST/luprwest.github.io/blob/main/neodgm.woff?raw=true') format('woff');
-    font-weight: normal; 
-    font-style: normal;
-}
-
-a:link { color: #1d8aae; text-decoration: none;}	
-a:visited { color: #1d8aae; text-decoration: none;}	
-a:hover { color: #26608f; text-decoration: none;}
-
-/*화면 비율*/
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-
-footer {
-    text-align: center;
-    position : relative;
-    padding-bottom: 10px;
-    transform : translateY(-100%);
-    font-size: 15px;
-}
