@@ -1,12 +1,12 @@
 /*cursor*/
 body {
-    cursor: url('https://github.com/LUPRWEST/luprwest.github.io/blob/main/cursor.PNG?raw=true') 2 2, default;
+    cursor: url('https://github.com/LUPRWEST/luprwest.github.io/blob/main/image/cursor.PNG?raw=true') 2 2, default;
 
-    /*fontr*/
+    /*font*/
     font-family: 'neodgmFont', sans-serif;
 }
 a, button{
-    cursor: url('https://github.com/LUPRWEST/luprwest.github.io/blob/main/cursor_event.PNG?raw=true') 2 2, pointer;
+    cursor: url('https://github.com/LUPRWEST/luprwest.github.io/blob/main/image/cursor_event.PNG?raw=true') 2 2, pointer;
 }
 
 *{
@@ -14,7 +14,8 @@ a, button{
     box-sizing: border-box;
     margin: 0;
 }
-@font-face {
+@font-face { 
+    /*폰트설정*/
     font-family: 'neodgmFont'; /* 나중에 쓸 이름 */
     src: url('https://github.com/LUPRWEST/luprwest.github.io/blob/main/neodgm.woff?raw=true') format('woff');
     font-weight: normal; 
